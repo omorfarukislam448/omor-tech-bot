@@ -28,8 +28,8 @@ from telegram.ext import (
 from keep_alive import keep_alive
 
 # ================= YOUR CREDENTIALS =================
-TOKEN = "8950937981:AAE-ORNOKmBXWN2WdzNUtO_UjB-CtabakCo"
-DEFAULT_ADMIN_ID = 8276619021
+TOKEN = "8740758744:AAF551GI6y42aXKDWdvHrM04yanX4Wo0Uj0"
+DEFAULT_ADMIN_ID = 6945991387
 
 SETTINGS_FILE = "bot_settings.json"
 USER_PAYMENTS_FILE = "user_payments.json"
