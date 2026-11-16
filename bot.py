@@ -520,7 +520,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     keyboard.append([InlineKeyboardButton("⚙ পেমেন্ট সেটিংস", callback_data="payment_menu"), InlineKeyboardButton("💳 আমার পেমেন্ট ও হিস্ট্রি", callback_data="my_payment_tracking")])
     keyboard.append([InlineKeyboardButton("📁 আমার হিস্ট্রি এক্সেল ফাইল", callback_data="export_my_history"), InlineKeyboardButton("🎁 রেফারেল লিংক ও ব্যালেন্স", callback_data="referral_menu_user")])
-    keyboard.append([InlineKeyboardButton("🌐 💳Crypto wellet address 💰", callback_data="user_crypto_wallets")])
+    keyboard.append([InlineKeyboardButton("💳 Crypto wellet address 💰", callback_data="user_crypto_wallets")])
 
     if is_admin(user.id):
         keyboard.append([InlineKeyboardButton("🛠 অ্যাডমিন প্যানেল সেটিংস", callback_data="admin_panel_menu")])
