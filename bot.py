@@ -520,7 +520,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     keyboard.append([InlineKeyboardButton("⚙ পেমেন্ট সেটিংস", callback_data="payment_menu"), InlineKeyboardButton("💳 আমার পেমেন্ট ও হিস্ট্রি", callback_data="my_payment_tracking")])
     keyboard.append([InlineKeyboardButton("📁 আমার হিস্ট্রি এক্সেল ফাইল", callback_data="export_my_history"), InlineKeyboardButton("🎁 রেফারেল লিংক ও ব্যালেন্স", callback_data="referral_menu_user")])
-    keyboard.append([InlineKeyboardButton("🌐 ক্রিপ্টো উইথড্র অ্যাড্রেস", callback_data="user_crypto_wallets")])
+    keyboard.append([InlineKeyboardButton("🌐 💳Crypto wellet address 💰", callback_data="user_crypto_wallets")])
 
     if is_admin(user.id):
         keyboard.append([InlineKeyboardButton("🛠 অ্যাডমিন প্যানেল সেটিংস", callback_data="admin_panel_menu")])
@@ -2209,7 +2209,7 @@ async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     report_file = f"Report_{target_name.replace(' ', '_')}_{target_uid}.xlsx"
                     wb.save(report_file)
                     
-                    caption_text = f"📊 **প্রিয় {target_name}, আপনার ফাইলের রিপোর্ট তৈরি হয়েছে!**\n\n✅ ভ্যালিড আইডি: **{l['unique']} টি**\n❌ রিজেক্ট (ব্যাক) আইডি: **{l['rejected']} টি**\n💰 আপনার মোট পেমেন্ট: **৳{l['earned_amount']}**\n\n*(আপনার ফাইলের ভ্যালিড আইডিগুলো **সবুজ** এবং রিজেক্ট আইডিগুলো **লাল** রঙে মার্ক করা ফাইলটি নিচে দেওয়া হলো)* 👇"
+                    caption_text = f"📊 **প্রিয় {target_name}, আপনার ফাইলের রিপোর্ট তৈরি হয়েছে!**\n\n✅ ভ্যালিড আইডি: **{l['unique']} টি**\n❌ রিজেক্ট (ব্যাক) আইডি: **{l['rejected']} টি**\n💰 আপনার মোট পেমেন্ট: **৳{l['earned_amount']}**\n\n*(আপনার ফাইলের ভ্যালিড আইডিগুলো " **সবুজ** এবং রিজেক্ট আইডিগুলো **লাল** রঙে মার্ক করা ফাইলটি দেওয়া হলো)*
                     
                     try:
                         with open(report_file, "rb") as f:
