@@ -28,8 +28,8 @@ from telegram.ext import (
 from keep_alive import keep_alive
 
 # ================= YOUR CREDENTIALS =================
-TOKEN = "8740758744:AAF551GI6y42aXKDWdvHrM04yanX4Wo0Uj0"
-DEFAULT_ADMIN_ID = 6945991387
+TOKEN = "8950937981:AAE-ORNOKmBXWN2WdzNUtO_UjB-CtabakCo"
+DEFAULT_ADMIN_ID = 8276619021
 
 SETTINGS_FILE = "bot_settings.json"
 USER_PAYMENTS_FILE = "user_payments.json"
@@ -2209,7 +2209,7 @@ async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     report_file = f"Report_{target_name.replace(' ', '_')}_{target_uid}.xlsx"
                     wb.save(report_file)
                     
-                    caption_text = f"📊 **প্রিয় {target_name}, আপনার ফাইলের রিপোর্ট তৈরি হয়েছে!**\n\n✅ ভ্যালিড আইডি: **{l['unique']} টি**\n❌ রিজেক্ট (ব্যাক) আইডি: **{l['rejected']} টি**\n💰 আপনার মোট পেমেন্ট: **৳{l['earned_amount']}**\n\n*(আপনার ফাইলের ভ্যালিড আইডিগুলো " **সবুজ** এবং রিজেক্ট আইডিগুলো **লাল** রঙে মার্ক করা ফাইলটি দেওয়া হলো)*
+                    caption_text = f"📊 **প্রিয় {target_name}, আপনার ফাইলের রিপোর্ট তৈরি হয়েছে!**\n\n✅ ভ্যালিড আইডি: **{l['unique']} টি**\n❌ রিজেক্ট (ব্যাক) আইডি: **{l['rejected']} টি**\n💰 আপনার মোট পেমেন্ট: **৳{l['earned_amount']}**\n\n*(আপনার ফাইলের ভ্যালিড আইডিগুলো **সবুজ** এবং রিজেক্ট আইডিগুলো **লাল** রঙে মার্ক করা ফাইলটি  দেওয়া হলো)* 👆🏻"
                     
                     try:
                         with open(report_file, "rb") as f:
